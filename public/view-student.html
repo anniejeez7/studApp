@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Student Application1</title>
+    <!--<script src="../angularjs/angular-1.4.7.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+    <script src="/static/app.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+
+<body ng-controller="MainController">
+    <table>
+        <tbody>
+            <tr>
+                <th>Sno</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr ng-repeat="student in students track by $index">
+                <td>{{$index+1}}</td>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.dob}}</td>
+                <td><button ng-click="editStudent(student.indexId)" ui-sref="editStudent">Edit</button></td>
+                <td><button ng-click="deleteStudent(student.indexId)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

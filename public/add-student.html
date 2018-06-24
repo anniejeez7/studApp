@@ -1,0 +1,18 @@
+<html>
+
+<head>
+    <title>Student Application1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js\"></script>
+    <script src='/static/app.js'></script>
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+
+<body ng-controller='MainController'>
+    <input type='text' placeholder="Name" ng-model='name' label='Name' />
+    <input type='text' placeholder="ID" ng-model='Id' label='ID' />
+    <input type='text' placeholder="DOB" ng-model='dob' label='DOB' />
+    <button ng-click='addStudent(Id,name,dob)'>Add</button>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "myApp",
+  "version": "0.0.0",
+  "description": "Simple application.",
+  "main": "server.js",
+  "author": "Annjee",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.10",
+    "mongojs": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
