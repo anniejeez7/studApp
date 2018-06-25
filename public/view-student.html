@@ -5,28 +5,29 @@
     <!--<script src="../angularjs/angular-1.4.7.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
     <script src="/static/app.js"></script>
-    <link rel="stylesheet" href="/static/styles.css">
-
+    <!--<link rel="stylesheet" href="/static/styles.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body ng-controller="MainController">
-    <table>
+    <table class="table table-striped" data-ng-init="onloadFun()">
         <tbody>
             <tr>
                 <th>Sno</th>
                 <th>ID</th>
                 <th>Name</th>
                 <th>DOB</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th></th>
+                <th></th>
             </tr>
-            <tr ng-repeat="student in students track by $index">
+            <tr ng-repeat="student in students">
                 <td>{{$index+1}}</td>
                 <td>{{student.id}}</td>
                 <td>{{student.name}}</td>
                 <td>{{student.dob}}</td>
-                <td><button ng-click="editStudent(student.indexId)" ui-sref="editStudent">Edit</button></td>
-                <td><button ng-click="deleteStudent(student.indexId)">Delete</button></td>
+                <td><i class="material-icons" role="button" ng-click="editStudent(student._id)" ui-sref="editStudent">create</i></td>
+                <td><span class="glyphicon glyphicon-trash" role="button" ng-click="deleteStudent(student._id)"></span></td>
             </tr>
         </tbody>
     </table>

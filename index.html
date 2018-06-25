@@ -5,20 +5,30 @@
     <!--<script src="../angularjs/angular-1.4.7.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
     <script src="/static/ui-router.js"></script>
-	<script src="/static/app.js"></script>
-    <link rel="stylesheet" href="/static/styles.css" >
+    <script src="/static/app.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 
 <body ng-app="myApp" ng-controller="MainController">
-    <h1>Student Application</h1>
     <!--<button ng-click="add-student.html">Add</button>
     <my-student></my-student>-->
     <nav class="navbar navbar-inverse" role="navigation">
-        <a ui-sref="home">Home</a>
-        <a ui-sref="addStudent">Add</a>
+        <div class="container-fluid">
+            <!--<div class="navbar-header">
+                <a class="navbar-brand" href="#">Student Application</a>
+            </div>-->
+            <ul class="nav navbar-nav">
+                <!--<li class="active"><a ui-sref="#">Home</a></li>-->
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="addStudent">Add</a></li>
+            </ul>
+            
+        </div>
     </nav>
     <br>
-    <div ui-view></div>
+    <div class="container card" ui-view></div>
 
 
 </body>
